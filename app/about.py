@@ -6,6 +6,8 @@ def app():
 
     with open('styles/about_style.css') as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+        st.markdown('<link rel="preconnect" href="https://fonts.googleapis.com">',
+                    unsafe_allow_html=True)
 
     logo = Image.open('images/logo.png')
     st.image(logo, width=100)
@@ -14,27 +16,38 @@ def app():
     ------------------------------
     '''
 
-    st.header('**Welcome to our project!**')
-    st.markdown("<h1 style='font-size: 18px; color: white;'>We recommend the use of dark mode. You can change the theme in the settings (on your right).</h1>",
-                    unsafe_allow_html=True)
+    st.markdown('<h1>Welcome to our project!</h1>',
+                unsafe_allow_html=True)
+    st.markdown("<h5>We recommend the use of dark mode. <br><br>\
+                You can change the theme in the settings (on your right).<br><br><br>\
+                Use the <strong>sidebar</strong> on the left to navigate the app</h5>",
+                unsafe_allow_html=True)
 
-    st.write('This project was made by 4 students from the Le Wagon Data Science Bootcamp.')
-    st.write('We have sourced and processed a wide range of stand-up scripts to analyse comedians and make our own comedy.')
+    st.markdown('<p>This project was made by 4 students from the Le Wagon Data\
+                Science Bootcamp.</p> <p>We have sourced and processed a wide range\
+                of stand-up scripts to analyse comedians and make our own comedy.</p>',
+                unsafe_allow_html=True)
     st.write("[GitHub Repo](%s)" % gh_url)
 
-    st.subheader('Use the **sidebar** on the left to navigate the app:')
-    st.write("1) Word clouds on comedy topics")
-    st.write("2) Robecca Stepford: an AI bot that tells you jokes based on your text input")
+    st.markdown("<ol>\
+                    <li>Word clouds on comedy topics</li>\
+                    <li>Robecca Stepford: an AI bot that tells you jokes based on your text input\
+                </li>\
+                <ol>",
+                unsafe_allow_html=True)
 
-    st.header('About our data')
-    st.subheader('Data at a glance')
-    st.write('- 555 individual transcripts')
-    st.write('- 268 comedians')
-    st.write('- 19 million characters')
-    st.write('- 3.6 million words')
-    st.write('- Information about artist gender, artist age and release year')
+    st.markdown('<h2>About our data</h2>', unsafe_allow_html=True)
+    st.markdown('<h3>Data at a glance</h3>', unsafe_allow_html=True)
+    st.markdown('<ul>\
+                    <li>555 individual transcripts</li>\
+                    <li>268 comedians</li>\
+                    <li>19 million characters</li>\
+                    <li>3.6 million words</li>\
+                    <li>Information about artist gender, artist age and release year</li>\
+                </ul>',
+                unsafe_allow_html=True)
 
-    st.header('Acknowledgments')
+    st.markdown('<h2>Acknowledgments</h2>', unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
 
@@ -57,10 +70,11 @@ def app():
         url4 = 'https://pypi.org/project/tmdbsimple/'
         st.write("- [tmdbsimple](%s)" % url4)
 
-    st.subheader('Special thanks:')
-    st.write("- Amanda, Christophe, Julio, Marie, Mohamad, Vinny, Yannis, Yassine")
-    st.write("- and all lecturers and TAs at Le Wagon London")
-    url7 = 'https://emoji-maker.com/'
-    st.write("- [Emoji App Studio](%s)" % url7)
+    st.markdown('<h2>Special thanks:</h2>', unsafe_allow_html=True)
+    st.markdown("<ul><li>Amanda, Christophe, Julio, Marie, Mohamad, Vinny, Yannis, Yassine</li>\
+                    <li>And all lecturers and TAs at Le Wagon London</li>\
+                    <li><a href='https://emoji-maker.com'>Emoji App Studio</a></li>\
+                    </ul>", unsafe_allow_html=True)
+    # st.markdown('<p><br><br></p>', unsafe_allow_html=True)
 
-    st.markdown("![Alt Text](https://i.imgur.com/aRT5t36.gif)")
+    st.markdown("<img class='robecca' src=https://i.imgur.com/aRT5t36.gif>", unsafe_allow_html=True)
