@@ -1,0 +1,42 @@
+# packaging
+pip>=9
+setuptools>=26
+twine
+wheel>=0.29
+jupyterlab
+
+# data science
+numpy
+pandas
+scikit-learn
+nltk==3.7
+matplotlib
+seaborn
+requests
+bs4
+pyldavis
+gensim
+tensorflow
+gpt-2-simple==0.8.1
+
+# tests/linter
+pytest==7.0.1
+pylint
+ipdb==0.13.9
+
+# API
+gcsfs==2022.2.0
+google-cloud-storage==2.1.0
+tmdbsimple==2.9.1
+python-dotenv
+fastapi
+uvicorn
+
+
+# hosting and front-end
+streamlit
+gtts==2.2.3
+
+# utilities
+six>=1.14
+wordcloud==1.8.1
