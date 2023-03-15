@@ -7,7 +7,7 @@
   background: rgb(38, 39, 48);
 }
 
-h1, h2, h3, h5, p, ol, ul, label {
+h1, h2, h3, h5, p, ol, ul {
   color: rgb(255, 255, 255);
   font-family: 'Poppins', sans-serif;
 }
